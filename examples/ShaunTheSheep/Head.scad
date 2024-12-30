@@ -4,7 +4,7 @@ head();
 
 module head() {
     ry(-90)
-    cylinder(h=30, d1=44, d2=41);
+    cylinder(h=30, d1=41, d2=38);
     
     s(1.1) {
         difference() {
@@ -14,13 +14,13 @@ module head() {
                 sphere(d=40); 
                 
                 sy(0.25, 0.5)
-                cylinder(d=20, h=1, $fn=3);
+                cylinder(d=20, h=1, $fn=27);
             }
             
             nostrilDistance = rand(8, 3);
             dy()
             x(10) y(nostrilDistance) z(-10)
-            sphere(d=5, $fn=20);
+            sphere(d=5, =20);
         }
         
         earRoll = rand(0, 25);
@@ -44,7 +44,7 @@ module mouth() {
     {
         rotate_extrude(angle=360, convexity = 4)
         x(7.5)
-        circle(d=3, $fn=20);
+        circle(d=3, $fn=60);
         
         red()
         z(-1.5)
@@ -56,7 +56,7 @@ module mouth() {
         for (tooth=[-5:2:5]) {
             x(2) y(tooth) 
             ry(90)
-            cylinder(r=1, h=(4), $fn=10);
+            cylinder(r=1, h=(4), $fn=30);
         }
     }
 }
